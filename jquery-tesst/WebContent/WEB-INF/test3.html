@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<link href="styles/myStyle.css" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+<h2>Email custom Report</h2>
+</div>
+<div id="main">
+<div><img id="img01" src="images/jump1.jpg"></div>
+<div><img id="img02" src="images/jump2.jpg"></div>
+<div><img id="img03" src="images/jump3.jpg"></div>
+<div><img id="img04" src="images/jump4.jpg" onclick="javascript:submitForm();"></div>
+</div>
+<div id="form01" class="no-hover">
+<form action="">
+<span><input type="text" id="custName" name="custName" value="nnnn"></span>
+<br><br><br>
+<span><input type="button" id="btn01" value="Submit" onclick="javascript:returnValue(document.getElementById('custName'))"></span>
+<br><br><br>
+<span><input type="button" id="btn02" value="Submit"></span>
+</form>
+<p>Here</p>
+</div>
+<script src="scripts/jquery-1.6.2.min.js"></script>
+<script src="scripts/myScript.js"></script>
+</body>
+</html>

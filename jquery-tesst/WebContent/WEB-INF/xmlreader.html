@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script src="scripts/jquery-1.6.2.min.js"></script>
+<!-- <script src="scripts/myScript.js"></script> -->
+<script>
+
+/* function getXMLData(){
+	$.ajax({
+		url: "book.xml",
+		dataType:"xml",
+		cache:false,
+		
+		error:function(){alert("Something went wrong");},
+		sucess:function(xml){
+			$("#content").empty();
+			$(xml).find("book").each(function(){
+				alert("reached till here");
+				var info = '<li>Name: ' + $(this).find("title").text() + ' ' + $(this).
+				find("author").text() + '. Time: ' + $(this).find("type").text() + '</li>';
+				$("#content").append(info);
+				//code for reading xml
+			/*	$("#content").append(
+				"<p>Title" + $(this).find("title").text() +
+				"<br>Author" + $(this).find("author").text() +
+				"<br>Type" + $(this).find("type").text() +
+				"<br>Error" + $(this).find("error").text() + 
+				"</p>"
+				);*/
+/* 			});
+		} ,
+		
+	});
+	}
+ */ 
+	$(document).ready(function(){
+		$.ajax({
+			url: "book.xml",
+			dataType:"xml",
+			cache:false,
+			
+			error:function(){alert("Something went wrong");},
+			sucess:function(xml){
+				alert("reached till here");
+				$("#content").empty();
+				$(xml).find("book").each(function(){
+					alert("reached till here");
+					var info = '<li>Name: ' + $(this).find("title").text() + ' ' + $(this).
+					find("author").text() + '. Time: ' + $(this).find("type").text() + '</li>';
+					$("#content").append(info);
+					//code for reading xml
+				/*	$("#content").append(
+					"<p>Title" + $(this).find("title").text() +
+					"<br>Author" + $(this).find("author").text() +
+					"<br>Type" + $(this).find("type").text() +
+					"<br>Error" + $(this).find("error").text() + 
+					"</p>"
+					);*/
+				});
+			} ,
+			
+		});
+		
+
+		
+	});
+</script>
+
+</head>
+<body>
+<div id="content"></div>
+ 
+</body>
+</html>

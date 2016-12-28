@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>new page</title>
+<script type="text/javascript">
+function submit1(){
+	console.log("done!!");
+};
+</script>
+<style type="text/css">
+h1{
+text-align: right;
+color: blue;
+font-size: 103;
+}
+.buttonClass{
+border-color: red;
+border-width: 5px;
+}
+#cssID{
+color: green;
+}
+#img1{
+float: left;
+border: thick;
+border: 10px;
+}
+</style>
+</head>
+<body>
+
+<p><h1>This is sample paragraph</h1></p>
+<br>
+<button class="buttonClass" id="b1" name="b1" value="b1">click here 1</button><br>
+<button class="buttonClass" id="b1" name="b1" value="b1">click here 2</button><br>
+<button class="buttonClass" id="b1" name="b1" value="b1">click here 3</button><br>
+<button class="buttonClass" id="cssID" name="b1" value="b1">click here 4</button><br>
+
+<img id="img1" src="images/jump1.jpg" align="top">
+
+<script>
+
+var msg; 
+
+$(document).ready(function(){
+
+	$("button").click(function(){
+		$("img").fadeIn(1000);
+	});
+});
+
+
+$(document).ready(function(){
+	$("buton").click(function(){
+		$("img").hide();
+	});
+});
+</script>
+</body>
+</html>
